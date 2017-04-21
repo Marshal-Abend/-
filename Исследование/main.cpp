@@ -22,6 +22,18 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 
+	int x, y = rand() % 100 + 1;
+	cout << "Введите писло: ";
+	cin >> x;
+	while (x != y)
+	{
+		(x > y) ? (cout << " Много" << endl) : (cout << " Мало" << endl);
+		cout << "Введите писло: ";
+		cin >> x;
+	}
+
+	cout<< " Вы Угадали!" << endl;
+
 	system("pause");
 	return 0;
 }

@@ -24,16 +24,16 @@ int main() {
 
 	int x;
 	int	y = rand() % 100 + 2;
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
 	cin >> x;
 	while (x != y)
 	{
-		(x > y) ? (cout << " Ìíîãî" << endl) : (cout << " Ìàëî" << endl);
-		cout << "Ââåäèòå ïèñëî: ";
+		(x > y) ? (cout << " ĞœĞ½Ğ¾Ğ³Ğ¾" << endl) : (cout << " ĞœĞ°Ğ»Ğ¾" << endl);
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿Ğ¸ÑĞ»Ğ¾: ";
 		cin >> x;
 	}
 
-	cout<< " Âû Óãàäàëè!" << endl;
+	cout<< " Ğ’Ñ‹ Ğ£Ğ³Ğ°Ğ´Ğ°Ğ»Ğ¸!" << endl;
 
 	system("pause");
 	return 0;

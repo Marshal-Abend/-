@@ -122,7 +122,7 @@ void dvaVStepeniX() {
 	long long int f;
 	for (long double i = 1; i < 100; i++) {
 		f = pow(( long double)2.0, i);
-		cout << "2 в степени " << i << " = " << f << endl;
+		cout << "2 РІ СЃС‚РµРїРµРЅРё " << i << " = " << f << endl;
 	}
 };
 
@@ -131,13 +131,13 @@ void discriminant() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	float a, b, c;
-	cout << "Введите a,b,c"<< endl;
+	cout << "Р’РІРµРґРёС‚Рµ a,b,c"<< endl;
 	cin >> a; cin >> b; cin >> c;
 	float d = sqrt(b*b - 4 * a * c);
 	float root1 = (-b + d) / (2 * a);
 	float root2 = (-b - d) / (2 * a);
-	cout << "Первый корень " << root1 << endl;
-	cout << "Второй корень " << root2 << endl;
+	cout << "РџРµСЂРІС‹Р№ РєРѕСЂРµРЅСЊ " << root1 << endl;
+	cout << "Р’С‚РѕСЂРѕР№ РєРѕСЂРµРЅСЊ " << root2 << endl;
 	system("pause");
 }
 
@@ -181,7 +181,7 @@ void GoodWorker() {
 		
 		cout << ((365*(r-r / 4)*24)+(366* (r / 4)*24))*(kof * a) << endl; }
 	else {
-		cout << "Ещё не работает" << endl;
+		cout << "Р•С‰С‘ РЅРµ СЂР°Р±РѕС‚Р°РµС‚" << endl;
 	}
 	system("pause");
 }
@@ -203,14 +203,14 @@ void ProgramistAndWebProgramistDay() {
 				if (denP == 7)denP = 0;
 			}
 			if (denP == 0)denP = 7;
-			cout <<"День программиста "<< denP << endl;
+			cout <<"Р”РµРЅСЊ РїСЂРѕРіСЂР°РјРјРёСЃС‚Р° "<< denP << endl;
 			//////////////////////
 			for (int i = 1; i < 94; i++) {
 				if (denWP == 7)denWP = 0;
 				denWP++;
 			}
 			if (denWP == 0)denWP = 7;
-			cout << "День веб-программиста " << denWP << endl;
+			cout << "Р”РµРЅСЊ РІРµР±-РїСЂРѕРіСЂР°РјРјРёСЃС‚Р° " << denWP << endl;
 			//////////////////////
 			for (int i = 1; i <366; i++, den++) {
 				if (den == 7)den = 0;
@@ -226,14 +226,14 @@ void ProgramistAndWebProgramistDay() {
 				if (denP == 7)denP = 0;
 			}
 			if (denP == 0)denP = 7;
-			cout << "День программиста " << denP << endl;
+			cout << "Р”РµРЅСЊ РїСЂРѕРіСЂР°РјРјРёСЃС‚Р° " << denP << endl;
 			//////////////////////
 			for (int i = 1; i <95; i++) {
 				if (denWP == 7)denWP = 0;
 				denWP++;
 			}
 			if (denWP == 0)denWP = 7;
-			cout << "День веб-программиста " << denWP << endl;
+			cout << "Р”РµРЅСЊ РІРµР±-РїСЂРѕРіСЂР°РјРјРёСЃС‚Р° " << denWP << endl;
 			//////////////////////
 			for (int i = 1; i <367; i++, den++) {
 				if (den == 7)den = 0;
@@ -246,7 +246,7 @@ void ProgramistAndWebProgramistDay() {
 			year++;
 		}
 	}
-	cout << "Совпадений = " << counter << endl;
+	cout << "РЎРѕРІРїР°РґРµРЅРёР№ = " << counter << endl;
 	system("pause");
 }
 
@@ -271,24 +271,24 @@ void SumOfSinuses() {
 		0.236661393,0.219454668,0.219425258,0.202149881,0.184781745,0.1673557,0.14987721,0.141120008,0.123573123,0.105987512,0.088368686,0.070752236,
 		0.070722167,0.053083587,0.035398303,0.017701925,} };
 	
-	for (int i = 0; i < 100; i++) {                                        //100 входов в цикл для перебора
+	for (int i = 0; i < 100; i++) {                                        //100 РІС…РѕРґРѕРІ РІ С†РёРєР» РґР»СЏ РїРµСЂРµР±РѕСЂР°
 
-		for (int l = 0; l < 20; l++) {                                     //присваивание начальных значений линии
+		for (int l = 0; l < 20; l++) {                                     //РїСЂРёСЃРІР°РёРІР°РЅРёРµ РЅР°С‡Р°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№ Р»РёРЅРёРё
 			s[0][l] = p[0][i];
 			s[1][l] = p[1][i];
 		}
-		for (int i=0;i<20; i++) {													//смешение влево на символ
-			for (int k = 0; k < 100; k++) {										//Перебор в одной ячейке			
+		for (int i=0;i<20; i++) {													//СЃРјРµС€РµРЅРёРµ РІР»РµРІРѕ РЅР° СЃРёРјРІРѕР»
+			for (int k = 0; k < 100; k++) {										//РџРµСЂРµР±РѕСЂ РІ РѕРґРЅРѕР№ СЏС‡РµР№РєРµ			
 				s[0][19 - l] = p[0][k];
-				for (int i = 0; i < 20; i++) {									//счёт суммы 
+				for (int i = 0; i < 20; i++) {									//СЃС‡С‘С‚ СЃСѓРјРјС‹ 
 					Sum = Sum + s[0][i];
 				}
 				if (Sum == 200) {
 					for (int i = 0; i < 20; i++) {
-						SinSum = SinSum + s[1][i];								//счёт синуса суммы
+						SinSum = SinSum + s[1][i];								//СЃС‡С‘С‚ СЃРёРЅСѓСЃР° СЃСѓРјРјС‹
 					}
 					if (SinSum > MaxSinSum) {
-						MaxSinSum = SinSum;										//сравнение с максимальным
+						MaxSinSum = SinSum;										//СЃСЂР°РІРЅРµРЅРёРµ СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј
 						for (int i = 0; i < 20; i++) {
 							Max[0][i] = s[0][i];
 							Max[1][i] = s[1][i];

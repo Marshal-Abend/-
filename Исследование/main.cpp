@@ -24,7 +24,7 @@ int main() {
 
 	int x;
 	int	y = rand() % 100 + 2;
-	cout << "¬ведите писло: ";
+	cout << "¬ведите число: ";
 	cin >> x;
 	while (x != y)
 	{

@@ -23,7 +23,7 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 
 	int x;
-	int	y = rand() % 100 + 1;
+	int	y = rand() % 100 + 2;
 	cout << "¬ведите писло: ";
 	cin >> x;
 	while (x != y)

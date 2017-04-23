@@ -118,14 +118,6 @@ class nigers{
 		}
 	};
 
-void dvaVStepeniX() {
-	long long int f;
-	for (long double i = 1; i < 100; i++) {
-		f = pow(( long double)2.0, i);
-		cout << "2 в степени " << i << " = " << f << endl;
-	}
-};
-
 
 void discriminant() {
 	SetConsoleCP(1251);

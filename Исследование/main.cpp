@@ -13,7 +13,51 @@ using namespace std;
 #include <vector>
 
 
+string sumS(string a, string b, int pos) {
+	int ost=0,u=0; int buff;
+	for (int i = pos; i < b.length() + pos; i++)
+	{
+		while (a.length() < b.length() + pos)a.push_back('0');
+		buff = (a[i] - '0') + (b[i-pos] - '0') % 10;
+		u = buff + u;
+		u /= 10;
+		if ((buff + ost) > 9) {
+			a[i] = (buff + ost) % 10 + '0';
+		}
+		else a[i] = buff + ost + '0';
+		ost = u % 10;
+		if (i == b.length()+pos-1 && ost!=0)b.push_back('0');
+	}
+	return a.substr(0, a.length());
+}
 
+
+string factorial(int n) {
+	if (n<0)
+	{
+		return "";
+	}
+	else if (n==(0||1))
+	{
+		return "1";
+	}
+	string a="1";
+	int u = 1,iter;
+	if (n == 1)return a;
+	for(int i=2;i<=n;++i)
+	{
+
+
+	}
+	int l= a.length()-1;
+	for (int i = 0; i <= l; ++i,--l)
+	{
+		char buff = a[i];
+		a[i] = a[l];
+		a[l] = buff;
+	}
+	return a.substr(0,a.length());
+}
 
 
 
@@ -21,19 +65,8 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-
-	int x;
-	int	y = rand() % 100 + 2;
-	cout << "Введите число: ";
-	cin >> x;
-	while (x != y)
-	{
-		(x > y) ? (cout << " Много" << endl) : (cout << " Мало" << endl);
-		cout << "Введите писло: ";
-		cin >> x;
-	}
-
-	cout<< " Вы Угадали!" << endl;
+	cout << sumS("2","2",0);
+	//factorial(5);
 
 	system("pause");
 	return 0;

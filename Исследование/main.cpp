@@ -12,8 +12,20 @@ using namespace std;
 
 #include <vector>
 
+string reverse_string(string a) {
+	int k = a.length()-1;
+	int buff;
+	for (int i = 0; i < k; ++i,--k)
+	{
+		buff = a[i];
+		a[i] = a[k];
+		a[k] = buff;
+	}
+	return a;
+}
 
-string sumS(string a, string b, int pos) {
+
+string sum_string(string a, string b, int pos) {
 	int ost=0,u=0; int buff;
 	for (int i = pos; i < b.length() + pos; i++)
 	{
@@ -32,6 +44,21 @@ string sumS(string a, string b, int pos) {
 }
 
 
+string multiply_string(string a, string b) {
+	int u;
+	string c="0";
+	for (int l = 0; l <b.length() ; ++l)
+	{
+		for (int i = 0; i < a.length(); ++i)
+		{
+			u = (a[i] - '0')*(b[l] - '0');
+			c=sum_string(c, reverse_string(to_string(u)),(l+i));
+		}
+	}
+	return c;
+}
+
+
 string factorial(int n) {
 	if (n<0)
 	{
@@ -46,16 +73,9 @@ string factorial(int n) {
 	if (n == 1)return a;
 	for(int i=2;i<=n;++i)
 	{
-
-
+		a = multiply_string(a,reverse_string(to_string(i)));
 	}
-	int l= a.length()-1;
-	for (int i = 0; i <= l; ++i,--l)
-	{
-		char buff = a[i];
-		a[i] = a[l];
-		a[l] = buff;
-	}
+	a = reverse_string(a);
 	return a.substr(0,a.length());
 }
 
@@ -65,8 +85,7 @@ string factorial(int n) {
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	cout << sumS("2","2",0);
-	//factorial(5);
+	cout << factorial(1000) << endl;
 
 	system("pause");
 	return 0;

@@ -80,7 +80,7 @@ string multiply_string(string a, string b) {
 }*/
 
 
-#include<string>
+/*#include<string>
 using namespace std;
 string factorial(int factorial) {
 	int n = factorial;
@@ -105,18 +105,34 @@ string factorial(int factorial) {
 		result += '0' + (*i);
 	}
 	return result;
-}
+}*/
 
+void zeroNeZero() {
+	int a[100], c = 0, buff,n=99;
+	for (int i = 0; i <= n; ++i)
+	{
+		a[i] = rand() % 2;
+	}
+	for (int i = 0; i<= n - c; ++i) {
+		if (a[i] == 0 && a[n - c] == 1) {
+			buff = a[i];
+			a[i] = a[n - c];
+			a[n - c] = buff;
+			++c;
+		}
+		else if (a[i] == 0 && a[n - c] == 0) {
+			--i; ++c;
+		}
+	}
+	for (int i = 0; i < 100; ++i)
+	{
+		cout << a[i] << " ";
+	}
+}
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int in;
-	cout << "Введите число n! ";
-	cin >> in;
-	ofstream potok("factorial.txt", ios_base::trunc | ios_base::out);
-	potok << factorial(in) << endl;
-	potok.close();
-	cout << "Данные успешно записаны в файл factorial.txt\n";
+	zeroNeZero();
 	system("pause");
 	return 0;
 }

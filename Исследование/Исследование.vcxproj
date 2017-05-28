@@ -142,10 +142,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Large Factorial.cpp">
+      <FileType>CppCode</FileType>
+    </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyMath.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Large Factorial.h" />
     <ClInclude Include="MyMath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\factorial.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

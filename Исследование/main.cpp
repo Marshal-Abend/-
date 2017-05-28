@@ -3,14 +3,16 @@
 #include <iomanip>
 #include <stdio.h>
 #include <math.h>
-#include "MyMath.h"
 #include <string>
 #include <fstream>
+#include <vector>
+#include <thread>
+#include "MyMath.h"
 
 
 using namespace std;
 
-#include <vector>
+
 
 string reverse_string(string a) {
 	int k = a.length()-1;
@@ -59,17 +61,17 @@ string multiply_string(string a, string b) {
 }
 
 
-/*string factorial(int n) {
+string factorial(int n) {
 	if (n<0)
 	{
 		return "";
 	}
-	else if (n==(0||1))
+	else if (n<=1)
 	{
 		return "1";
 	}
 	string a="1";
-	int u = 1,iter;
+	int u = 1;
 	if (n == 1)return a;
 	for(int i=2;i<=n;++i)
 	{
@@ -77,49 +79,19 @@ string multiply_string(string a, string b) {
 	}
 	a = reverse_string(a);
 	return a.substr(0,a.length());
-}*/
-
-
-#include<string>
-using namespace std;
-string factorial(int factorial) {
-	int n = factorial;
-	if (n < 0) return "";
-	if (n <= 1)  return "1";
-	std::vector<int> v = { 2 };
-	for (int i = 3; i <= n; i++) {
-		int r = 0; //remainder
-		for (int j = 0; j < (int)v.size(); j++) {
-			v[j] *= i;
-			v[j] += r;
-			r = v[j] / 10;
-			v[j] %= 10;
-		}
-		while (r > 0) {
-			v.push_back(r % 10);
-			r /= 10;
-		}
-	}
-	string result;
-	for (auto i = v.rbegin(); i != v.rend(); i++) {
-		result += '0' + (*i);
-	}
-	return result;
 }
+
+
+
+
 
 
 int main() {
-	setlocale(LC_ALL, "Russian");
-	int in;
-	cout << "Введите число n! ";
-	cin >> in;
-	ofstream potok("factorial.txt", ios_base::trunc | ios_base::out);
-	potok << factorial(in) << endl;
-	potok.close();
-	cout << "Данные успешно записаны в файл factorial.txt\n";
-	system("pause");
+	large_factorial();
 	return 0;
 }
+
+
 
 
 
